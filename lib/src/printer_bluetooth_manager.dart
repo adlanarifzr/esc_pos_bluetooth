@@ -88,7 +88,7 @@ class PrinterBluetoothManager {
 
     if (!_isConnected) {
       // We have to rescan before connecting, otherwise we can connect only once
-      await _bluetoothManager.startScan(timeout: Duration(seconds: 1));
+      await _bluetoothManager.startScan(timeout: timeout);
       await _bluetoothManager.stopScan();
 
       // Connect
