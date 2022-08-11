@@ -33,6 +33,7 @@ class PrinterBluetoothManager {
   PrinterBluetooth? _selectedPrinter;
 
   BluetoothManager get bluetoothManager => _bluetoothManager;
+  PrinterBluetooth? get selectedPrinter => _selectedPrinter;
 
   final BehaviorSubject<bool> _isScanning = BehaviorSubject.seeded(false);
   Stream<bool> get isScanningStream => _isScanning.stream;
