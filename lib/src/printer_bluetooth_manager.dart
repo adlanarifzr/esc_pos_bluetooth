@@ -18,6 +18,7 @@ class PrinterBluetooth {
   PrinterBluetooth(this._device);
   final BluetoothDevice _device;
 
+  BluetoothDevice get device => _device;
   String? get name => _device.name;
   String? get address => _device.address;
   int? get type => _device.type;
