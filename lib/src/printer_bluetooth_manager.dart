@@ -149,6 +149,7 @@ class PrinterBluetoothManager {
     List<int> bytes, {
     int chunkSizeBytes = 20,
     int queueSleepTimeMs = 20,
+    Duration timeout = const Duration(seconds: 5),
   }) async {
     if (bytes.isEmpty) {
       return Future<PosPrintResult>.value(PosPrintResult.ticketEmpty);
@@ -157,6 +158,7 @@ class PrinterBluetoothManager {
       bytes,
       chunkSizeBytes: chunkSizeBytes,
       queueSleepTimeMs: queueSleepTimeMs,
+      timeout: timeout,
     );
   }
 }
